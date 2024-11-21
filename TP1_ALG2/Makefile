@@ -73,8 +73,3 @@ clean:
 # make comprimir file=./input/gif/leo.gif
 # make descomprimir file=./output/leo_comprimido.bin format=gif
 # make comprimir_descomprimir file=./input/gif/leo.gif max_bits=16
-
-# Exemplo de uso:
-# make comprimir file=./input/txt/abc.txt tipo=v
-# make descomprimir file=./output/abc_comprimido.bin format=txt tipo=v
-# make comprimir_descomprimir file=./input/txt/abc.txt tipo=v
