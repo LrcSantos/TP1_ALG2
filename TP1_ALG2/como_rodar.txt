@@ -15,14 +15,6 @@ obs: [max_bits] é um argumento opcional de bits máximos para a codificação/d
 
 Como rodar cada exemplo:
 
-abc.txt:
-    python3 ./src/lzw.py v c ./input/txt/abc.txt ./output/abc_comprimido.bin
-    python3 ./src/lzw.py v d ./output/abc_comprimido.bin ./output/abc_descomprimido.txt
-
-paragrafo.txt:
-    python3 ./src/lzw.py v c ./input/txt/paragrafo.txt ./output/paragrafo_comprimido.bin
-    python3 ./src/lzw.py v d ./output/paragrafo_comprimido.bin ./output/paragrafo_descomprimido.txt
-
 Car.bmp
     python3 ./src/lzw.py f c ./input/bmp/Car.bmp ./output/Car_comprimido.bin
     python3 ./src/lzw.py f d ./output/Car_comprimido.bin ./output/Car_descomprimido.bmp
