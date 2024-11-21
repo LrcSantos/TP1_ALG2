@@ -54,22 +54,22 @@ clean:
 
 #---------------------------------------------------------------------------------
 
-# Exemplo de uso:
+# Exemplo de uso (tipo variado, max 16bits):
 # make comprimir file=./input/txt/MobyDick.txt tipo=v max_bits=16
 # make descomprimir file=./output/MobyDick_comprimido.bin format=txt tipo=v max_bits=16
 # make comprimir_descomprimir file=./input/txt/MobyDick.txt tipo=v max_bits=16
 
-# Exemplo de uso:
+# Exemplo de uso (tipo padrão/fixo, max bits padrão/12bits):
 # make comprimir file=./input/tiff/jetplane.tiff
 # make descomprimir file=./output/jetplane_comprimido.bin format=tiff
 # make comprimir_descomprimir file=./input/tiff/jetplane.tiff
 
-# Exemplo de uso:
-# make comprimir file=./input/txt/The_Art_of_War.txt
-# make descomprimir file=./output/The_Art_of_War_comprimido.bin format=txt
-# make comprimir_descomprimir file=./input/txt/The_Art_of_War.txt
+# Exemplo de uso (tipo fixo, max bits padrão/12bits):
+# make comprimir file=./input/txt/The_Art_of_War.txt tipo=f
+# make descomprimir file=./output/The_Art_of_War_comprimido.bin format=txt tipo=f
+# make comprimir_descomprimir file=./input/txt/The_Art_of_War.txt tipo=f
 
-# Exemplo de uso:
-# make comprimir file=./input/gif/leo.gif
-# make descomprimir file=./output/leo_comprimido.bin format=gif
+# Exemplo de uso (tipo padrão/fixo, max 16bits):
+# make comprimir file=./input/gif/leo.gif max_bits=16
+# make descomprimir file=./output/leo_comprimido.bin format=gif max_bits=16
 # make comprimir_descomprimir file=./input/gif/leo.gif max_bits=16
