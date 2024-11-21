@@ -45,12 +45,12 @@ clean:
 # make comprimir <file> <tipo> [max_bits]
 
 # Formato do comando para descomprimir:
-# make comprimir <file> <format> <tipo> [max_bits]
+# make descomprimir <file> <format> <tipo> [max_bits]
 
 # Formato do comando para comprimir_descomprimir:
 # make comprimir_descomprimir <file> <tipo> [max_bits]
 
-# obs: caso não seja passado um tipo, define o valor padrão como f (tamanho fixo)
+# obs: caso não seja passado um tipo, define o valor padrão como f (lzw tamanho fixo)
 
 #---------------------------------------------------------------------------------
 
