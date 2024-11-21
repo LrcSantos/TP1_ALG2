@@ -549,6 +549,11 @@ def main():
 
     base_name = os.path.splitext(os.path.basename(arquivo_entrada))[0]
 
+    # Verificar se o diretório ./output existe, se não existir então criar ele
+    output_dir = os.path.dirname(arquivo_saida)
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+
     if tipo not in ['f', 'v']:
         print("Erro: O tipo deve ser 'f' (fixo) ou 'v' (variável).")
         sys.exit(1)
