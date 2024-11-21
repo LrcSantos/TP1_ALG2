@@ -24,6 +24,79 @@
 Veja o relatório aqui:
 https://lrcsantos.github.io/Site_TP1_ALG2/
 
+# Como executar o programa usando Makefile
+
+## Passo a Passo
+
+1. Navegue até o diretório raiz do projeto `TP1_ALG2` com o seguinte comando no terminal:
+
+    ```bash
+    cd ./TP1_ALG2
+    ```
+
+2. Utilize os formatos de comando abaixo para executar as operações de compressão, descompressão ou ambas.
+
+### Formatos dos Comandos
+
+- **Para comprimir:**
+    ```bash
+    make comprimir file=<caminho arquivo> tipo=<fixo/variável> max_bits=[bits]
+    ```
+
+- **Para descomprimir:**
+    ```bash
+    make descomprimir file=<caminho arquivo> format=<formato do arquivo> tipo=<fixo/variável> max_bits=[bits]
+    ```
+
+- **Para comprimir e descomprimir:**
+    ```bash
+    make comprimir_descomprimir file=<caminho arquivo> tipo=<fixo/variável> max_bits=[bits]
+    ```
+
+### Argumentos
+
+- **Argumento obrigatório:**
+  - `tipo`:
+    - `f`: Algoritmo LZW de tamanho fixo (valor padrão)
+    - `v`: Algoritmo LZW de tamanho variável
+
+- **Argumento opcional:**
+  - `max_bits`: Número máximo de bits para codificação/decodificação (padrão: 12 bits)
+
+### Observação
+- Caso o argumento `tipo` não seja especificado, o valor padrão será `f` (algoritmo LZW de tamanho fixo).
+
+3. Após a execução, o programa:
+   - Salvará o arquivo de saída na pasta `./output`.
+   - Escreverá os resultados de estatísticas na pasta `./stats`.
+
+---
+
+## Exemplos Práticos
+
+### Exemplo: MobyDick (tipo variável, 16 bits)
+```bash
+make comprimir file=./input/txt/MobyDick.txt tipo=v max_bits=16
+make descomprimir file=./output/MobyDick_comprimido.bin format=txt tipo=v max_bits=16
+make comprimir_descomprimir file=./input/txt/MobyDick.txt tipo=v max_bits=16
+```
+
+ ### Exemplo: jetplane (tipo padrão/fixo, 12 bits padrão)
+ 
+ ```bash
+make comprimir file=./input/tiff/jetplane.tiff
+make descomprimir file=./output/jetplane_comprimido.bin format=tiff
+make comprimir_descomprimir file=./input/tiff/jetplane.tiff
+```
+
+Exemplo: leo (GIF, 16 bits)
+
+ ```bash
+make comprimir file=./input/gif/leo.gif max_bits=16
+make descomprimir file=./output/leo_comprimido.bin format=gif max_bits=16
+make comprimir_descomprimir file=./input/gif/leo.gif max_bits=16
+```
+
 # Como executar o programa no terminal
 
 ## Passo a Passo
