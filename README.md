@@ -79,7 +79,11 @@ https://lrcsantos.github.io/Site_TP1_ALG2/
 ### Exemplo: MobyDick (tipo variável, 16 bits)
 ```bash
 make comprimir file=./input/txt/MobyDick.txt tipo=v max_bits=16
+```
+```bash
 make descomprimir file=./output/MobyDick_comprimido.bin format=txt tipo=v max_bits=16
+```
+```bash
 make comprimir_descomprimir file=./input/txt/MobyDick.txt tipo=v max_bits=16
 ```
 
@@ -87,7 +91,11 @@ make comprimir_descomprimir file=./input/txt/MobyDick.txt tipo=v max_bits=16
  
  ```bash
 make comprimir file=./input/tiff/jetplane.tiff
+```
+```bash
 make descomprimir file=./output/jetplane_comprimido.bin format=tiff
+```
+```bash
 make comprimir_descomprimir file=./input/tiff/jetplane.tiff
 ```
 
@@ -95,7 +103,11 @@ Exemplo: leo (GIF, 16 bits)
 
  ```bash
 make comprimir file=./input/gif/leo.gif max_bits=16
+```
+```bash
 make descomprimir file=./output/leo_comprimido.bin format=gif max_bits=16
+```
+```bash
 make comprimir_descomprimir file=./input/gif/leo.gif max_bits=16
 ```
 
@@ -144,7 +156,11 @@ python3 ./src/lzw.py <fixo/variável> <compressão/descompressão> <caminho arqu
  
  ```bash
 cd ./TP1_ALG2
+```
+ ```bash
 python3 ./src/lzw.py f c ./input/txt/MobyDick.txt ./output/MobyDick_comprimido.bin 16
+```
+ ```bash
 python3 ./src/lzw.py f d ./output/MobyDick_comprimido.bin ./output/MobyDick_descomprimido.txt 16
 ```
 
@@ -152,13 +168,21 @@ python3 ./src/lzw.py f d ./output/MobyDick_comprimido.bin ./output/MobyDick_desc
 
  ```bash
 cd ./TP1_ALG2
+```
+ ```bash
 python3 ./src/lzw.py f c ./input/tiff/jetplane.tiff ./output/jetplane_comprimido.bin
+```
+ ```bash
  python3 ./src/lzw.py f d ./output/jetplane_comprimido.bin ./output/jetplane_descomprimido.tiff
 ```
 
 ### Exemplo: Frankenstein
  ```bash
 cd ./TP1_ALG2
+```
+ ```bash
 python3 ./src/lzw.py v c ./input/txt/Frankenstein.txt ./output/Frankenstein_comprimido.bin
+```
+ ```bash
 python3 ./src/lzw.py v d ./output/Frankenstein_comprimido.bin ./output/Frankenstein_descomprimido.txt
 ```
