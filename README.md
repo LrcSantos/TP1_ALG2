@@ -78,7 +78,7 @@ python3 ./src/lzw.py f d ./output/MobyDick_comprimido.bin ./output/MobyDick_desc
  ```bash
 cd ./TP1_ALG2
 python3 ./src/lzw.py f c ./input/tiff/jetplane.tiff ./output/jetplane_comprimido.bin
-python3 ./src/lzw.py f d ./output/jetplane_comprimido.bin ./output/jetplane_descomprimido.tiff
+ python3 ./src/lzw.py f d ./output/jetplane_comprimido.bin ./output/jetplane_descomprimido.tiff
 ```
 
 ### Exemplo: Frankenstein
