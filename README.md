@@ -165,3 +165,88 @@ Root
  │         └── A -> 258
  └── B -> 66
       ├── A -> 257
+```
+## Nesse exemplo:
+- Cada nó representa um padrão ou prefixo.
+- O valor no nó é o código associado no dicionário LZW.
+
+---
+
+## Implementação
+
+A implementação do algoritmo LZW foi realizada utilizando Python, com foco na eficiência e clareza do código. O algoritmo foi dividido em duas etapas principais: **compressão** e **descompressão**, ambas baseadas no uso de uma **Trie Compacta** como dicionário dinâmico.
+
+### Estrutura Geral
+
+1. **Leitura da Entrada:**  
+   A entrada é processada como uma sequência de caracteres (ou bytes), a partir de um arquivo ou string.
+   
+2. **Compressão:**  
+   O texto de entrada é percorrido caractere por caractere para identificar os maiores padrões presentes no dicionário. Caso um padrão não seja encontrado, ele é adicionado ao dicionário com um novo código, e o código do maior padrão encontrado é registrado na saída.
+   
+3. **Descompressão:**  
+   Na etapa de descompressão, os códigos gerados durante a compressão são utilizados para reconstruir a sequência original. O dicionário é reconstruído dinamicamente conforme os padrões são encontrados.
+   
+4. **Gerenciamento do Dicionário:**  
+   O dicionário é implementado como uma Trie Compacta, que permite buscar, adicionar e gerenciar padrões de maneira eficiente.
+
+### Fluxo da Compressão
+
+1. Inicialização do dicionário com os padrões básicos (todos os caracteres ASCII ou outro conjunto inicial).
+2. Percorrendo a sequência de entrada, o maior padrão já presente no dicionário é identificado.
+3. O código correspondente ao padrão encontrado é adicionado à saída.
+4. O novo padrão (padrão atual + próximo caractere) é inserido no dicionário com um código único.
+5. O processo é repetido até que toda a entrada seja processada.
+
+### Fluxo da Descompressão
+
+1. Inicialização do dicionário com os padrões básicos, similar à compressão.
+2. Para cada código recebido na entrada comprimida:
+   - O padrão correspondente é identificado e adicionado à saída.
+   - O novo padrão (último padrão + primeiro caractere do padrão atual) é inserido no dicionário.
+3. O processo continua até que todos os códigos sejam decodificados.
+
+### Resultados
+
+- **Compressão eficiente:** O algoritmo reduz significativamente o tamanho da entrada para diferentes tipos de arquivos com padrões repetidos.
+- **Descompressão exata:** A reconstrução da sequência original é realizada sem perdas, validando a integridade do método.
+
+---
+
+## Estatísticas e Testes
+
+Foram realizados testes com diferentes tipos de arquivos, incluindo texto, gifs e imagens. As estatísticas geradas incluem:
+
+- Tempo total de execução.
+- Tamanho original do arquivo.
+- Tamanho do arquivo comprimido.
+- Taxa de compressão.
+- Crescimento do Dicionário.
+- Dados Processados ao Longo do Tempo.
+
+Os resultados mostraram que a versão com tamanho variável obteve melhor eficiência em compressão para arquivos maiores, enquanto a versão fixa foi mais rápida em casos menores.
+
+---
+
+## Conclusão
+
+A implementação do algoritmo LZW utilizando uma Trie Compacta demonstrou a eficiência desse método em cenários de compressão sem perdas, especialmente na manipulação de padrões repetidos. 
+
+A comparação entre as variações de comprimento fixo e variável dos códigos evidenciou:
+- Vantagens e desvantagens de cada abordagem.
+- O equilíbrio necessário entre simplicidade, eficiência de memória e desempenho.
+
+Os testes realizados confirmaram que a Trie Compacta é uma escolha adequada para representar o dicionário dinâmico, garantindo buscas e inserções rápidas, além de uma utilização otimizada da memória. Esses resultados validam a eficácia do LZW em diversos formatos de arquivos e oferecem insights sobre o impacto de diferentes configurações no desempenho do algoritmo, contribuindo para aplicações futuras em sistemas modernos de compressão de dados.
+
+---
+
+## Referências
+
+- [LZW Compression - MIT Handout](https://web.mit.edu/6.02/www/s2012/handouts/3.pdf)
+- [Data Compression - David Salomon](https://www.davidsalomon.name/DC4advertis/DComp4Ad.html)
+- [Compressão sem perdas - Codificação LZW](http://multimedia.ufp.pt/codecs/compressao-sem-perdas/codificacao-baseada-em-dicionarios/lzw/)
+- [LZW Compression Technique - GeeksforGeeks](https://www.geeksforgeeks.org/lzw-lempel-ziv-welch-compression-technique/)
+
+---
+
+&copy; 2024 Algoritmos II - Lucas Rafael Costa Santos | Lucca Alvarenga de Magalhães Pinto
