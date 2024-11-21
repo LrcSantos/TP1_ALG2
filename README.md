@@ -1,8 +1,5 @@
 # Trabalho Prático: Compressão com LZW
 
-Para ver o relatório clique no link abaixo:
-https://lrcsantos.github.io/Site_TP1_ALG2/
-
 ## Colaboradores
 
 <table>
@@ -10,18 +7,21 @@ https://lrcsantos.github.io/Site_TP1_ALG2/
     <td align="center">
       <a href="#">
         <sub>
-          <b><a href="https://github.com/luccaamp">Lucca Alvarenga</a></b>
+          <b><a href="https://github.com/LrcSantos">Lucas Rafael Costa Santos</a></b>
         </sub>
       </a>
     </td>
      <td align="center">
       <a href="#">
         <sub>
-          <b><a href="https://github.com/LrcSantos">Lucas Santos</a></b>
+          <b><a href="https://github.com/luccaamp">Lucca Alvarenga de Magalhães Pinto</a></b>
         </sub>
       </a>
     </td>
   </tr>
 </table>
+
+Para ver o relatório clique no link:
+https://lrcsantos.github.io/Site_TP1_ALG2/
 
 
