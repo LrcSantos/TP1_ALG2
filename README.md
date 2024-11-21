@@ -51,7 +51,7 @@ https://lrcsantos.github.io/Site_TP1_ALG2/
 ### Argumentos Opcionais
 
 - **Número máximo de bits:**
-  - `num`: Especifica o número máximo de bits para codificação/decodificação (padrão: 12 bits).
+  - `max_bits`: Especifica o número máximo de bits para codificação/decodificação (padrão: 12 bits).
 
 ### Formato Geral do Comando
 
