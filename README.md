@@ -24,7 +24,7 @@
 
 
 Veja o relatório aqui:
-
+https://lrcsantos.github.io/Site_TP1_ALG2/
 
 # Como executar o programa usando Makefile
 
