@@ -152,7 +152,7 @@ python3 ./src/lzw.py <fixo/variável> <compressão/descompressão> <caminho arqu
 
 ##  Exemplos Práticos
 
- ### Exemplo: MobyDick:
+ ### Exemplo: MobyDick
  
  ```bash
 cd ./TP1_ALG2
