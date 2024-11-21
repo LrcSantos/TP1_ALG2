@@ -21,7 +21,7 @@
   </tr>
 </table>
 
-Para ver o relatório clique no link:
+Veja o relatório aqui:
 https://lrcsantos.github.io/Site_TP1_ALG2/
 
 
